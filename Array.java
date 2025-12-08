@@ -66,7 +66,42 @@ public class Array {
     }
     //형 변환을 해도 double에 int값을 넣으면 형 변환이 되는거기에 문제가 없음.
     
+    //다중 배열
+    //동일한 자료형을 여러개 묶어 사용함.
+    int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    //이런 배열은 
+    //1	2	3	4	5	6	7	8	9	10
+    //이렇게 가로로도 보관할 수 있겠지만 (주석달기 귀찮음)세로로도 볼 수 있음.
+    //그러면 다중배열은? 어떻게 나타낼 수 있을까?
+    // 1 2 3 4
+    // 5 6 7 8
+    // 9 10 11 12
+    int[][] multiArray;
+    int[][] multiArray = {
+    {1, 2, 3, 4},
+    {5, 6, 7, 8},
+    {9, 10, 11, 12}
+    };
+    //이렇게 생성할 수 있다.
+    // int[3][4] 의 배열이 생성된 것이다.
+    //사용방법은
+    for (int i = 0; i < multiArray.length; i++) {
+    for (int j = 0; j < multiArray[i].length; j++) {
+        multiArray[i][j] = (i * 4 + 1) + j;
+      }
+    }
+    for (int i = 0; i < multiArray[0].length; i++) {
+    multiarray[0][i] = 1 + i;
+    }
 
+    for (int i = 0; i < multiArray[1].length; i++) {
+    multiarray[1][i] = 5 + i;
+    }
+
+    for (int i = 0; i < multiArray[2].length; i++) {
+    multiarray[2][i] = 9 + i;
+    }
+    //이런 식으로 사용할 수 있다.
    
   } 
 }
